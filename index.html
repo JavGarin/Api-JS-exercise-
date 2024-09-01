@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas - Javier Garín</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1 class="title">Conversor de monedas nacional</h1>
+
+    <div class="converter-container">
+        <h1>Pesos CLP</h1>
+        
+        <input type="number" id="amount" min="0" step="any" style="text-align: center;" placeholder="Ingrese el monto en CLP" class="input-field">
+
+        <h2>Moneda a convertir:</h2>
+        
+        <select id="currency" class="input-field">
+            <option value="0" selected>Seleccione moneda</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="BTC">Bitcoin</option>
+            <option value="COPPER">Libra de Cobre</option>
+            <option value="UF">Unidad de Fomento</option>
+            <option value="UTM">Unidad Tributaria Mensual</option>
+            <option value="IVP">Índice de Valor Promedio</option>
+
+        </select>
+
+        <button id="convert-button" class="convert-button">Buscar</button>
+
+        <p id="conversion-result" class="conversion-result"></p>
+
+        <p class="error-message"></p>
+        
+        <div class="chart-container"> <!-- El contenedor del gráfico-->
+            <canvas id="exchangeChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
+
+
+
